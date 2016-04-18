@@ -1,0 +1,12 @@
+alpha=0.004 #initiation rate
+beta=0.01 #termination rate
+gamma=9.99 #reinitiation rate
+k=10. #(av.) elongation rate
+footprint=1 #size of the TASEP particles
+t_max=3000 #simulation time 
+dt=1 # measurement and output (for time evolutions) interval.
+no_runs=50
+detailed_output=0  #higher number increases verbosity.
+length=400 #length of transcript. Alternative: RNA_filename=... (give filename for sequence data)
+mode=0 #standard run: 0; exp. dist. lifetime: 1; exp. dist.+fixed lifetime: 2; single slow codon: 4-6; read RNA file, but av. elongation rate: 8.
+lambda=0. #speed of single slow step

@@ -1,0 +1,31 @@
+reTASEP - TASEP with reinitiation
+Implementation of the totally asymmetric simple exclusion process (TASEP) with
+reinitiation and particles of arbitrary size. 
+
+requirements:
+C++-compiler (g++) that supports C++11
+
+usage:
+1. compile with "make"
+2. set parameters in file "parameters.inp"
+3. start "./reTASEP"
+
+Detailed usage:
+"./reTASEP parameterfile value=key value2=xyz ..."
+The parameterfile has one Key=Value pair per line, comments start with a '#'.
+mandatory keys: alpha, beta, gamma, k, lambda, t_max, dt, no_runs, mode, detailed_output. 
+
+run modes "mode=...":
+standard run: 0; exp. dist. lifetime: 1; exp. dist.+fixed lifetime: 2;
+single slow codon: 4-6; read RNA file, but av. elongation rate: 8.
+
+output modes "detailed_output=...":
+0 -> standard output: density, av. number of proteins
+1 -> detailed output: also print density and yield for each run
+2 -> time evolution density
+3 -> time evolution yield
+4 -> time evolution <density> <yield/time> <total yield until that time>
+5 -> print av. occupation per codon
+
+optional keys (pick one of them!): length, RNA_filename.
+example: ./simRNAtransl parameters.inp alpha=0.1 beta=0.5
